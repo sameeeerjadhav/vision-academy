@@ -27,7 +27,7 @@ export default function ContactPage() {
             </p>
             <div className="contact-links">
               <a href={academy.maps} target="_blank" rel="noreferrer"><Icon name="pin" size={18} /> Open in Google Maps</a>
-              <a href={`https://wa.me/${academy.whatsapp}`} target="_blank" rel="noreferrer"><Icon name="chat" size={18} /> Chat on WhatsApp</a>
+              <a href={`https://wa.me/${academy.whatsapp}`} target="_blank" rel="noreferrer"><img className="wa-mini" src="/images/whatsapp.svg" alt="" /> Chat on WhatsApp</a>
             </div>
             <iframe className="map" title="Map showing Ring Road, Jalgaon near JDCC Bank" loading="lazy" src={academy.mapsEmbed} />
           </article>
