@@ -16,6 +16,7 @@ export default function GalleryPage() {
     <>
       <PageHero
         kicker="GALLERY"
+        icon="camera"
         title="Inside the classroom"
         text="Sample classroom pictures hold these frames until photographs from the Ring Road centre are added."
       />

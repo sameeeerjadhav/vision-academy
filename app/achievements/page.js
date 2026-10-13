@@ -1,6 +1,15 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import { Icon } from "@/components/Icons";
 import { achievements } from "@/data/content";
+
+const examIcons = {
+  "SSC & CBSE": "book",
+  "HSC Science": "flask",
+  JEE: "cap",
+  NEET: "shield",
+  "MHT-CET": "star",
+};
 
 export const metadata = { title: "Achievements" };
 
@@ -9,6 +18,7 @@ export default function AchievementsPage() {
     <>
       <PageHero
         kicker="ACHIEVEMENTS"
+        icon="star"
         title="Boards and entrance exams"
         text="Students prepare for these exams. Names and marks are added only after the academy confirms them."
       />
@@ -21,7 +31,7 @@ export default function AchievementsPage() {
           <div className="achieve-grid">
             {achievements.map((item) => (
               <article className="panel" key={item.exam}>
-                <p className="kicker">{item.exam}</p>
+                <span className="icon-chip"><Icon name={examIcons[item.exam]} /></span>
                 <h2 style={{ fontSize: "1.45rem" }}>{item.exam}</h2>
                 <p>{item.detail}</p>
               </article>

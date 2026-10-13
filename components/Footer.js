@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "@/components/Icons";
 import { academy, nav } from "@/data/content";
 
 export default function Footer() {
@@ -43,10 +44,13 @@ export default function Footer() {
           </div>
           <div>
             <h3>Contact Us</h3>
-            <p>
-              {academy.address.map((line) => (
-                <span key={line}>{line}<br /></span>
-              ))}
+            <p className="foot-address">
+              <Icon name="pin" size={18} />
+              <span>
+                {academy.address.map((line) => (
+                  <span key={line}>{line}<br /></span>
+                ))}
+              </span>
             </p>
             <p style={{ marginTop: "0.7rem" }}>
               <Link href="/contact">Send an enquiry</Link>

@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import EnquiryForm from "@/components/EnquiryForm";
+import { Icon } from "@/components/Icons";
 import { academy } from "@/data/content";
 
 export const metadata = { title: "Contact" };
@@ -9,6 +10,7 @@ export default function ContactPage() {
     <>
       <PageHero
         kicker="CONTACT"
+        icon="pin"
         title="Visit, or send an enquiry"
         text="Share your mobile number and the course. The academy will call you back."
       />
@@ -24,8 +26,8 @@ export default function ContactPage() {
               ))}
             </p>
             <div className="contact-links">
-              <a href={academy.maps} target="_blank" rel="noreferrer">Open in Google Maps</a>
-              <a href={`https://wa.me/${academy.whatsapp}`} target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+              <a href={academy.maps} target="_blank" rel="noreferrer"><Icon name="pin" size={18} /> Open in Google Maps</a>
+              <a href={`https://wa.me/${academy.whatsapp}`} target="_blank" rel="noreferrer"><Icon name="chat" size={18} /> Chat on WhatsApp</a>
             </div>
             <iframe className="map" title="Map showing Ring Road, Jalgaon near JDCC Bank" loading="lazy" src={academy.mapsEmbed} />
           </article>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { courses, mentors, reasons, stats } from "@/data/content";
 import GoogleReviews from "@/components/GoogleReviews";
-import { Mini, StatIcon } from "@/components/Icons";
+import { Icon, Mini, StatIcon } from "@/components/Icons";
 
 const featureIcons = {
   people: "M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM16 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM3 19c.6-2.6 2.8-4 5-4s4.4 1.4 5 4M14 19c.3-1.6 1.5-2.8 3-3.2",
@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="wrap hero-copy">
           <p className="pill"><i /> Trusted coaching in Jalgaon</p>
           <h1>Best Coaching Classes in <span>Jalgaon for School, Science &amp; Entrance</span></h1>
-          <p className="pin">📍 Near JDCC Bank, Ring Road, Jalgaon</p>
+          <p className="pin"><Icon name="pin" size={18} /> Near JDCC Bank, Ring Road, Jalgaon</p>
           <p className="lede">At Anil Mala&apos;s Vision Academy, students get full guidance, support, and personal attention. State Board, CBSE, class 11 and 12 Science, plus JEE, NEET, and MHT-CET.</p>
           <div className="hero-actions">
             <Link className="btn btn-yellow" href="/admissions">Enroll Now →</Link>

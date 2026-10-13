@@ -8,6 +8,7 @@ export default function MentorsPage() {
     <>
       <PageHero
         kicker="OUR TEAM"
+        icon="users"
         title="Meet our mentors"
         text="Anil Mala Sir leads counselling. Subject teachers cover school, science, and entrance."
       />

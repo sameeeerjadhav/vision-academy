@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Icon } from "@/components/Icons";
 import { courseOptions } from "@/data/content";
 
 export default function EnquiryForm() {
@@ -36,7 +37,7 @@ export default function EnquiryForm() {
 
   return (
     <form className="form panel" onSubmit={onSubmit}>
-      <p className="kicker">ENQUIRY</p>
+      <p className="kicker"><Icon name="clipboard" size={16} />ENQUIRY</p>
       <h2 style={{ fontSize: "1.45rem" }}>Tell us about the student</h2>
       <p className="hp" aria-hidden="true"><label>Company <input name="company" tabIndex={-1} autoComplete="off" /></label></p>
       <label>Student name <input name="student" required autoComplete="name" /></label>

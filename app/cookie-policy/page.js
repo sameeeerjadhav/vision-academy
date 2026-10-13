@@ -1,13 +1,15 @@
 import PageHero from "@/components/PageHero";
+import { Icon } from "@/components/Icons";
 
 export const metadata = { title: "Cookie Policy" };
 
 export default function CookiePolicyPage() {
   return (
     <>
-      <PageHero kicker="LEGAL" title="Cookie policy" text="This website stores one preference in your browser." />
+      <PageHero kicker="LEGAL" icon="shield" title="Cookie policy" text="This website stores one preference in your browser." />
       <section className="section">
         <div className="wrap narrow panel prose">
+          <span className="icon-chip"><Icon name="shield" /></span>
           <p>The only saved item is your choice on the cookie notice, so the notice stays closed on the next visit. It is not used for advertising.</p>
           <h2>What is stored</h2>
           <p>Name: va-cookie. Value: accepted. Purpose: remember that you accepted the notice.</p>

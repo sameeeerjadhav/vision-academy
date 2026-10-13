@@ -10,6 +10,7 @@ export default function CoursesPage() {
     <>
       <PageHero
         kicker="OUR PROGRAMS"
+        icon="book"
         title="Every course the academy runs"
         text="Standards 5 to 10 on State Board and CBSE, class 11 and 12 Science, and a special batch for JEE, NEET, and MHT-CET."
       />

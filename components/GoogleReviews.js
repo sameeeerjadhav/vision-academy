@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Icon } from "@/components/Icons";
 import { academy } from "@/data/content";
 
 const slides = [
@@ -28,7 +29,7 @@ export default function GoogleReviews() {
   return (
     <section className="section reviews" id="reviews">
       <div className="wrap center">
-        <p className="kicker">GOOGLE REVIEWS</p>
+        <p className="kicker"><Icon name="star" size={16} />GOOGLE REVIEWS</p>
         <h2>What Families Say</h2>
         <p className="sub">Words from the academy, until parent reviews from Google are ready to publish here.</p>
         <div className="review-stage">

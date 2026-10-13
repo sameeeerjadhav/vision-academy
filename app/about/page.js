@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { Mini } from "@/components/Icons";
+import { Icon, Mini } from "@/components/Icons";
 import { reasons } from "@/data/content";
 
 const featureIcons = {
@@ -19,6 +19,7 @@ export default function AboutPage() {
     <>
       <PageHero
         kicker="ABOUT US"
+        icon="users"
         title="Why families come to Vision Academy"
         text="Anil Mala's coaching centre on Ring Road, Jalgaon. In front of Saraswat Bank, near JDCC Bank."
       />
@@ -59,14 +60,17 @@ export default function AboutPage() {
           </div>
           <div className="course-grid">
             <article className="course-card">
+              <span className="icon-chip"><Icon name="book" /></span>
               <h3>Standards 5 to 10</h3>
               <p>Maharashtra State Board and CBSE, in Semi-English and English medium.</p>
             </article>
             <article className="course-card">
+              <span className="icon-chip"><Icon name="flask" /></span>
               <h3>11th and 12th Science</h3>
               <p>Physics, Chemistry, Mathematics, and Biology for PCM and PCB.</p>
             </article>
             <article className="course-card">
+              <span className="icon-chip"><Icon name="cap" /></span>
               <h3>Entrance batch</h3>
               <p>JEE, NEET, and MHT-CET practice alongside the science syllabus.</p>
             </article>
