@@ -20,6 +20,7 @@ export default function CookieNotice() {
         type="button"
         onClick={() => {
           localStorage.setItem("va-cookie", "accepted");
+          window.dispatchEvent(new Event("va-cookie"));
           setVisible(false);
         }}
       >
