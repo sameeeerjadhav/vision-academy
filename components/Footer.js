@@ -15,13 +15,7 @@ export default function Footer() {
       <footer className="site-footer">
         <div className="wrap footer-grid">
           <div>
-            <div className="foot-brand">
-              <svg width="36" height="36" viewBox="0 0 48 48" aria-hidden="true">
-                <circle cx="24" cy="24" r="22" fill="#08364d" />
-                <path d="M24 10l9 3.4V22c0 6.2-3.6 10.6-9 12.2C18.6 32.6 15 28.2 15 22V13.4L24 10z" fill="none" stroke="#f5b400" strokeWidth="1.8" />
-              </svg>
-              VISION ACADEMY
-            </div>
+            <img className="foot-logo" src="/images/logo.png" alt="Anil Mala's Vision Academy" />
             <p>Quality education for a better future of students, and satisfaction for parents. Full guidance, support, and personal attention.</p>
           </div>
           <div>
