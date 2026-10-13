@@ -20,10 +20,10 @@ export const nav = [
 ];
 
 export const stats = [
-  { icon: "student", value: "5–10", label: "Standards" },
-  { icon: "teacher", value: "11–12", label: "Science" },
-  { icon: "grads", value: "3", label: "Entrance Exams" },
-  { icon: "reviews", value: "Google", label: "Reviews" },
+  { icon: "student", value: "5–10", label: "Standards", note: "State Board and CBSE" },
+  { icon: "teacher", value: "11–12", label: "Science", note: "Physics, Chemistry, Maths, Biology" },
+  { icon: "grads", value: "3", label: "Entrance Exams", note: "JEE, NEET and MHT-CET" },
+  { icon: "reviews", value: "Google", label: "Reviews", note: "Open the academy listing", href: academy.maps },
 ];
 
 export const reasons = [

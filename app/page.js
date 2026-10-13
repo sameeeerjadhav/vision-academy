@@ -31,18 +31,25 @@ export default function HomePage() {
       </section>
 
       <section className="stats" aria-label="Academy at a glance">
-        <div className="wrap stats-grid">
-          {stats.map((item) => (
-            <div key={item.label}>
-              <StatIcon name={item.icon} />
-              <div className="stat-value">{item.value}</div>
-              <div className="stat-label">{item.label}</div>
-            </div>
-          ))}
+        <div className="wrap">
+          <div className="stats-grid">
+            {stats.map((item) => {
+              const body = (
+                <>
+                  <span className="stat-icon-wrap"><StatIcon name={item.icon} /></span>
+                  <div className="stat-value">{item.value}</div>
+                  <div className="stat-label">{item.label}</div>
+                  <p className="stat-note">{item.note}</p>
+                </>
+              );
+              return item.href ? (
+                <a className="stat" key={item.label} href={item.href} target="_blank" rel="noreferrer">{body}</a>
+              ) : (
+                <article className="stat" key={item.label}>{body}</article>
+              );
+            })}
+          </div>
         </div>
-        <svg className="skyline" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 90h40V60h30V40h20V70h40V30h50V80h30V50h40V90h60V35h25V75h40V20h30V90h50V55h35V90h80V25h20V65h45V90h70V40h30V90h60V15h25V70h40V90h90V45h40V90h80V30h30V90H1200" fill="none" stroke="white" strokeWidth="1.4" />
-        </svg>
       </section>
 
       <section className="section why">
