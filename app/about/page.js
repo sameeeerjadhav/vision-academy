@@ -22,26 +22,55 @@ export default function AboutPage() {
         title="Why families come to Vision Academy"
         text="Anil Mala's coaching centre on Ring Road, Jalgaon. In front of Saraswat Bank, near JDCC Bank."
       />
-      <section className="section">
+      <section className="section why">
         <div className="wrap why-grid">
-          <div className="prose">
+          <div>
+            <p className="kicker">OUR STORY</p>
             <h2>A class with a clear aim</h2>
-            <p>Vision Academy teaches for a better future of students and for the satisfaction of parents. School batches run from standard 5 to 10 for Maharashtra State Board and CBSE, in Semi-English and English. Science batches cover class 11 and 12. A special batch prepares students for JEE, NEET, and MHT-CET.</p>
-            <p>Anil Mala Sir leads counselling. Parents sit with him before a student is placed in a batch, so the board, the medium, and the exam all match.</p>
+            <p className="sub">Vision Academy teaches for a better future of students, and for the satisfaction of parents. Anil Mala Sir leads counselling, so the board, the medium, and the exam are chosen before a student joins.</p>
+            <div className="features">
+              {reasons.map((item) => (
+                <article className="feature" key={item.title}>
+                  <div className="feature-icon"><Mini d={featureIcons[item.icon]} /></div>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
             <Link className="btn btn-yellow" href="/admissions">Enroll Now →</Link>
           </div>
-          <img className="about-photo" src="/images/about.jpg" alt="Classroom discussion" />
+          <div className="why-photo">
+            <img src="/images/about.jpg" alt="Students and a teacher in a classroom" />
+            <div className="year-badge">
+              <strong>5–12</strong>
+              <span>Standards under one roof</span>
+            </div>
+          </div>
         </div>
-        <div className="wrap features" style={{ marginTop: "2rem" }}>
-          {reasons.map((item) => (
-            <article className="feature panel" key={item.title}>
-              <div className="feature-icon"><Mini d={featureIcons[item.icon]} /></div>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
+      </section>
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="center">
+            <p className="kicker">WHO IT IS FOR</p>
+            <h2>Three groups. One centre.</h2>
+            <p className="sub">School, junior college, and entrance preparation sit on Ring Road, so a family does not have to split coaching across the city.</p>
+          </div>
+          <div className="course-grid">
+            <article className="course-card">
+              <h3>Standards 5 to 10</h3>
+              <p>Maharashtra State Board and CBSE, in Semi-English and English medium.</p>
             </article>
-          ))}
+            <article className="course-card">
+              <h3>11th and 12th Science</h3>
+              <p>Physics, Chemistry, Mathematics, and Biology for PCM and PCB.</p>
+            </article>
+            <article className="course-card">
+              <h3>Entrance batch</h3>
+              <p>JEE, NEET, and MHT-CET practice alongside the science syllabus.</p>
+            </article>
+          </div>
         </div>
       </section>
     </>
