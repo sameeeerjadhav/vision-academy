@@ -29,6 +29,11 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 0.6rem; }
 p { margin: 0; }
 
 main { overflow-x: clip; }
+.wrap {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 4vw, 2.75rem);
+}
 .skip {
   position: absolute; left: 1rem; top: -4rem; background: var(--brand); color: white; padding: 0.4rem 0.7rem; z-index: 20;
 }
@@ -42,7 +47,7 @@ main { overflow-x: clip; }
   display: flex; align-items: center;
   box-shadow: 0 1px 0 rgba(0,0,0,0.12);
 }
-.site-header .wrap { display: flex; align-items: center; gap: 1rem; width: min(1200px, calc(100% - 1.4rem)); }
+.site-header .wrap { display: flex; align-items: center; gap: 1rem; width: min(1180px, 100%); }
 .brand { display: flex; align-items: center; gap: 0.7rem; margin-right: auto; color: white; }
 .brand-mark { width: 42px; height: 42px; flex: none; }
 .brand strong { display: block; font-size: 0.98rem; letter-spacing: 0.06em; font-weight: 700; }
@@ -82,7 +87,8 @@ main { overflow-x: clip; }
     linear-gradient(90deg, rgba(8, 32, 48, 0.78) 0%, rgba(8, 32, 48, 0.45) 46%, rgba(8, 32, 48, 0.18) 100%),
     url("/images/hero.jpg") center 30% / cover no-repeat;
 }
-.hero-copy { position: relative; max-width: 680px; padding: 4.5rem 0; }
+.hero-copy { position: relative; max-width: 1180px; padding: 4.5rem 0; }
+.hero h1, .hero .lede { max-width: 720px; }
 .pill {
   display: inline-flex; align-items: center; gap: 0.45rem;
   background: rgba(10, 24, 36, 0.45); border: 1px solid rgba(255,255,255,0.18);
@@ -330,7 +336,6 @@ input:focus, select:focus, textarea:focus { outline: 2px solid rgba(245, 180, 0,
   .section { padding: 2.4rem 0; }
   .page-hero { padding: 2.1rem 0; }
   .year-badge { left: 0.7rem; bottom: 0.7rem; min-width: 0; }
-  .wrap { width: min(1140px, calc(100% - 1.25rem)); }
 }
 @keyframes rise {
   from { opacity: 0; transform: translateY(16px); }
