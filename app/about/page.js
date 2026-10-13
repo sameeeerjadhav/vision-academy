@@ -30,7 +30,7 @@ export default function AboutPage() {
             <p>Anil Mala Sir leads counselling. Parents sit with him before a student is placed in a batch, so the board, the medium, and the exam all match.</p>
             <Link className="btn btn-yellow" href="/admissions">Enroll Now →</Link>
           </div>
-          <img src="/images/about.jpg" alt="Classroom discussion" style={{ width: "100%", height: 360, objectFit: "cover", borderRadius: 24 }} />
+          <img className="about-photo" src="/images/about.jpg" alt="Classroom discussion" />
         </div>
         <div className="wrap features" style={{ marginTop: "2rem" }}>
           {reasons.map((item) => (
