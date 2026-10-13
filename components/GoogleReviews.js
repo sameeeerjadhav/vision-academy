@@ -35,12 +35,14 @@ export default function GoogleReviews() {
           <button className="review-nav prev" type="button" aria-label="Previous review" onClick={() => setIndex((i) => (i + slides.length - 1) % slides.length)}>‹</button>
           <button className="review-nav next" type="button" aria-label="Next review" onClick={() => setIndex((i) => (i + 1) % slides.length)}>›</button>
           <div className="quote-mark" aria-hidden="true">”</div>
-          <div className="avatar" aria-hidden="true">G</div>
-          <p className="stars">Google</p>
-          <blockquote>“{slide.quote}”</blockquote>
-          <p className="who">{slide.name}</p>
-          <p className="role">{slide.role}</p>
-          <a className="g-link" href={academy.maps} target="_blank" rel="noreferrer">Open the academy on Google</a>
+          <div className="review-slide" key={index}>
+            <div className="avatar" aria-hidden="true">G</div>
+            <p className="stars">Google</p>
+            <blockquote>“{slide.quote}”</blockquote>
+            <p className="who">{slide.name}</p>
+            <p className="role">{slide.role}</p>
+            <a className="g-link" href={academy.maps} target="_blank" rel="noreferrer">Open the academy on Google</a>
+          </div>
         </article>
         <div className="dots">
           {slides.map((item, i) => (
