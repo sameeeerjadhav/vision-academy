@@ -24,7 +24,7 @@ Home, About, Courses, Admissions, Mentors, Achievements, Gallery, Contact, Notic
 
 ## Edit the content
 
-Academy address, courses, notices, and the WhatsApp number live in `data/content.js`. Change `academy.whatsapp` to the academy's own number before sharing the site. It must be the full number with country code and no spaces or plus sign, for example `919876543210`.
+Academy address, courses, notices, and the WhatsApp number live in `data/content.js`. The chat button uses `academy.whatsapp`, currently `919028123928` (+91 90281 23928). Keep the country code and leave out spaces.
 
 Photos are in `public/images`. The header logo is `logo.png`. Classroom photos are samples until pictures from the centre are added.
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { courses, mentors, reasons, stats } from "@/data/content";
 import GoogleReviews from "@/components/GoogleReviews";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import { Icon, Mini, StatIcon } from "@/components/Icons";
 
 const featureIcons = {
@@ -18,6 +19,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
+        <HeroSlideshow />
         <div className="wrap hero-copy">
           <p className="pill"><i /> Trusted coaching in Jalgaon</p>
           <h1>Best Coaching Classes in <span>Jalgaon for School, Science &amp; Entrance</span></h1>

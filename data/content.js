@@ -6,7 +6,7 @@ export const academy = {
   address: ["In front of Saraswat Bank,", "Near JDCC Bank, Ring Road,", "Jalgaon 425001, Maharashtra"],
   maps: "https://www.google.com/maps/search/?api=1&query=Saraswat+Bank+near+JDCC+Bank+Ring+Road+Jalgaon+425001",
   mapsEmbed: "https://maps.google.com/maps?q=JDCC%20Bank%20Ring%20Road%20Jalgaon&z=16&output=embed",
-  whatsapp: "918788743507",
+  whatsapp: "919028123928",
 };
 
 export const nav = [
