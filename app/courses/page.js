@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { Mini } from "@/components/Icons";
+import { Icon } from "@/components/Icons";
 import { courses } from "@/data/content";
 
 export const metadata = { title: "Courses" };
@@ -24,16 +24,21 @@ export default function CoursesPage() {
           <div className="course-grid">
             {courses.map((course) => (
               <article className="course-card" key={course.title}>
-                {course.badge ? <span className="badge">{course.badge}</span> : <span className="badge" style={{ visibility: "hidden" }}>Batch</span>}
-                <h3>{course.title}</h3>
-                <p style={{ color: "var(--muted)" }}>{course.text}</p>
-                <div className="meta">
-                  <Mini d="M5 5h6v14H5zM13 5h6v14h-6z" />
-                  <span><b>SUBJECTS</b>{course.subjects}</span>
+                <div className="course-top">
+                  <span className="icon-chip"><Icon name={course.icon} /></span>
+                  {course.badge ? <span className={course.badge === "Advanced" ? "badge badge-advanced" : "badge"}>{course.badge}</span> : <span />}
                 </div>
-                <div className="meta">
-                  <Mini d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v6l4 2" />
-                  <span><b>DURATION</b>{course.duration}</span>
+                <h3>{course.title}</h3>
+                <p className="course-text">{course.text}</p>
+                <div className="course-facts">
+                  <div className="meta">
+                    <Icon name="book" size={18} />
+                    <span><b>SUBJECTS</b>{course.subjects}</span>
+                  </div>
+                  <div className="meta">
+                    <Icon name="clock" size={18} />
+                    <span><b>DURATION</b>{course.duration}</span>
+                  </div>
                 </div>
                 <Link className="btn btn-yellow btn-block" href="/admissions">Enroll Now →</Link>
               </article>

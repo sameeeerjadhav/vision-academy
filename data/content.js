@@ -40,6 +40,7 @@ export const courses = [
   {
     title: "5th to 10th — State Board",
     badge: "Most Popular",
+    icon: "book",
     subjects: "Mathematics, Science, English and the Maharashtra State Board syllabus",
     duration: "Full academic year",
     text: "School coaching for standards 5 to 10. Semi-English and English medium, including the SSC year.",
@@ -47,6 +48,7 @@ export const courses = [
   {
     title: "5th to 10th — CBSE",
     badge: "",
+    icon: "book",
     subjects: "Mathematics, Science, English and the CBSE syllabus",
     duration: "Full academic year",
     text: "The same standards on the CBSE pattern, in Semi-English and English medium.",
@@ -54,6 +56,7 @@ export const courses = [
   {
     title: "11th & 12th Science — PCM",
     badge: "",
+    icon: "flask",
     subjects: "Physics, Chemistry, Mathematics",
     duration: "Full academic year",
     text: "Junior college science for students whose group is PCM.",
@@ -61,6 +64,7 @@ export const courses = [
   {
     title: "11th & 12th Science — PCB",
     badge: "",
+    icon: "flask",
     subjects: "Physics, Chemistry, Biology",
     duration: "Full academic year",
     text: "Junior college science for students whose group is PCB.",
@@ -68,6 +72,7 @@ export const courses = [
   {
     title: "JEE, NEET & MHT-CET",
     badge: "Advanced",
+    icon: "cap",
     subjects: "Physics, Chemistry, Mathematics, Biology",
     duration: "With the science year",
     text: "A special entrance batch so board studies and entrance practice stay together.",

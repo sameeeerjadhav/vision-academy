@@ -91,22 +91,28 @@ export default function HomePage() {
           <div className="course-grid">
             {featured.map((course) => (
               <article className="course-card" key={course.title}>
-                {course.badge ? <span className="badge">{course.badge}</span> : <span className="badge" style={{ visibility: "hidden" }}>.</span>}
-                <h3>{course.title}</h3>
-                <div className="meta">
-                  <Mini d="M5 5h6v14H5zM13 5h6v14h-6z" />
-                  <span><b>SUBJECTS</b>{course.subjects}</span>
+                <div className="course-top">
+                  <span className="icon-chip"><Icon name={course.icon} /></span>
+                  {course.badge ? <span className={course.badge === "Advanced" ? "badge badge-advanced" : "badge"}>{course.badge}</span> : <span />}
                 </div>
-                <div className="meta">
-                  <Mini d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v6l4 2" />
-                  <span><b>DURATION</b>{course.duration}</span>
+                <h3>{course.title}</h3>
+                <p className="course-text">{course.text}</p>
+                <div className="course-facts">
+                  <div className="meta">
+                    <Icon name="book" size={18} />
+                    <span><b>SUBJECTS</b>{course.subjects}</span>
+                  </div>
+                  <div className="meta">
+                    <Icon name="clock" size={18} />
+                    <span><b>DURATION</b>{course.duration}</span>
+                  </div>
                 </div>
                 <Link className="btn btn-yellow btn-block" href="/admissions">Enroll Now →</Link>
               </article>
             ))}
           </div>
-          <div style={{ marginTop: "1.4rem" }}>
-            <Link className="btn btn-yellow" href="/courses">View All Courses →</Link>
+          <div className="course-more">
+            <Link className="btn btn-line" href="/courses">View All Courses →</Link>
           </div>
         </div>
       </section>

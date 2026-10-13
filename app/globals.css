@@ -201,22 +201,31 @@ main { overflow-x: clip; }
 .year-badge strong { display: block; font-size: 1.7rem; line-height: 1; }
 .year-badge span { font-size: 0.88rem; font-weight: 600; }
 
-.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2rem; }
+.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.15rem; margin-top: 2rem; }
 .course-card {
-  background: white; border-radius: 22px; padding: 1.15rem 1.15rem 1.2rem;
-  box-shadow: var(--shadow); border: 1px solid #eef2f6;
-  display: flex; flex-direction: column; gap: 0.75rem;
+  background: white; border-radius: 22px; padding: 1.15rem 1.15rem 1.15rem;
+  box-shadow: var(--shadow); border: 1px solid #e8eef3;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.course-top { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; min-height: 44px; }
+.course-top .icon-chip { margin: 0; }
 .course-card:hover, .mentor-card:hover, .panel:hover, .notice:hover, .steps li:hover {
   transform: translateY(-6px);
   box-shadow: 0 22px 44px rgba(16, 42, 67, 0.12);
 }
 .badge {
   align-self: flex-start; background: #e7f8f3; color: #0f8f7a;
-  border-radius: 999px; padding: 0.2rem 0.7rem; font-size: 0.78rem; font-weight: 700;
+  border-radius: 999px; padding: 0.22rem 0.7rem; font-size: 0.75rem; font-weight: 700;
 }
-.course-card h3 { font-size: 1.25rem; font-weight: 800; min-height: 2.6em; }
+.badge-advanced { background: #fff4d4; color: #8a5b00; }
+.course-card h3 { font-size: 1.22rem; font-weight: 800; line-height: 1.25; min-height: 2.5em; }
+.course-text { color: var(--muted); font-size: 0.94rem; margin: 0; flex: 1; }
+.course-facts { display: grid; gap: 0.6rem; padding-top: 0.8rem; border-top: 1px solid #e8eef3; }
+.course-more { margin-top: 1.5rem; }
+.btn-line { background: white; color: var(--brand-deep); border: 1.5px solid #d5dee6; }
+.btn-line:hover { background: #f4f7fa; border-color: var(--brand); }
 .meta { display: flex; gap: 0.55rem; color: var(--muted); font-size: 0.92rem; }
 .meta svg { flex: none; margin-top: 0.15rem; color: var(--teal); }
 .meta b { display: block; color: var(--ink); font-size: 0.75rem; letter-spacing: 0.06em; }
