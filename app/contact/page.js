@@ -15,14 +15,18 @@ export default function ContactPage() {
       <section className="section">
         <div className="wrap split">
           <article className="panel address">
-            <h2>Vision Academy</h2>
+            <p className="kicker">THE CENTRE</p>
+            <h2>Ring Road, Jalgaon</h2>
             <p>
               {academy.legal}<br />
               {academy.address.map((line) => (
                 <span key={line}>{line}<br /></span>
               ))}
             </p>
-            <p><a href={academy.maps} target="_blank" rel="noreferrer">Open in Google Maps</a></p>
+            <div className="contact-links">
+              <a href={academy.maps} target="_blank" rel="noreferrer">Open in Google Maps</a>
+              <a href={`https://wa.me/${academy.whatsapp}`} target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+            </div>
             <iframe className="map" title="Map showing Ring Road, Jalgaon near JDCC Bank" loading="lazy" src={academy.mapsEmbed} />
           </article>
           <EnquiryForm />

@@ -7,7 +7,7 @@ export default function CookiePolicyPage() {
     <>
       <PageHero kicker="LEGAL" title="Cookie policy" text="This website stores one preference in your browser." />
       <section className="section">
-        <div className="wrap prose panel">
+        <div className="wrap narrow panel prose">
           <p>The only saved item is your choice on the cookie notice, so the notice stays closed on the next visit. It is not used for advertising.</p>
           <h2>What is stored</h2>
           <p>Name: va-cookie. Value: accepted. Purpose: remember that you accepted the notice.</p>

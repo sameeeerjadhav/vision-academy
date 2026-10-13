@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { achievements } from "@/data/content";
 
@@ -9,21 +10,28 @@ export default function AchievementsPage() {
       <PageHero
         kicker="ACHIEVEMENTS"
         title="Boards and entrance exams"
-        text="Scores are published here only after the academy confirms them. Nothing on this page is an invented result."
+        text="Students prepare for these exams. Names and marks are added only after the academy confirms them."
       />
       <section className="section">
-        <div className="wrap achieve-grid">
-          {achievements.map((item) => (
-            <article className="panel" key={item.exam}>
-              <p className="kicker">EXAM</p>
-              <h2>{item.exam}</h2>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="wrap panel" style={{ marginTop: "1.2rem" }}>
-          <h2>This year’s board</h2>
-          <p>Student names and marks will be added each result season. If your family wants a confirmed result considered for this page, say so in the enquiry form.</p>
+        <div className="wrap">
+          <div className="center" style={{ marginBottom: "0.2rem" }}>
+            <p className="kicker">EXAMS</p>
+            <h2>What the batches prepare for</h2>
+          </div>
+          <div className="achieve-grid">
+            {achievements.map((item) => (
+              <article className="panel" key={item.exam}>
+                <p className="kicker">{item.exam}</p>
+                <h2 style={{ fontSize: "1.45rem" }}>{item.exam}</h2>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <article className="panel" style={{ marginTop: "1rem" }}>
+            <h2>This year’s board</h2>
+            <p>The scoreboard stays empty until a result is confirmed. If your family wants a mark considered for this page, say so in the enquiry.</p>
+            <p style={{ marginTop: "0.9rem" }}><Link className="btn btn-yellow" href="/contact">Send a result note</Link></p>
+          </article>
         </div>
       </section>
     </>

@@ -4,10 +4,10 @@ import EnquiryForm from "@/components/EnquiryForm";
 export const metadata = { title: "Admissions" };
 
 const steps = [
-  ["01", "Tell us the class", "State Board or CBSE, Semi-English or English, or class 11 / 12 Science."],
+  ["01", "Tell us the class", "State Board or CBSE, Semi-English or English, or class 11 and 12 Science."],
   ["02", "Send the form", "Add a mobile number. The academy calls you back."],
-  ["03", "Counselling", "Anil Mala Sir matches the student to a batch at the Ring Road centre."],
-  ["04", "Confirm the timing", "Days and fees are explained in person so the class fits the school day."],
+  ["03", "Counselling", "Anil Mala Sir matches the student to a batch at Ring Road."],
+  ["04", "Confirm the timing", "Days and fees are set in person so the class fits school."],
 ];
 
 export default function AdmissionsPage() {
@@ -19,18 +19,29 @@ export default function AdmissionsPage() {
         text="There is no online payment. You enrol after a conversation at the centre."
       />
       <section className="section">
-        <div className="wrap split">
-          <div>
-            <ol className="steps">
-              {steps.map(([n, title, text]) => (
-                <li key={n}><span>{n}</span><strong>{title}.</strong> {text}</li>
-              ))}
-            </ol>
-            <article className="panel" style={{ marginTop: "1rem" }}>
-              <h2>Batches &amp; timings</h2>
-              <p>Each course has its own batch. The clock time is fixed during counselling, using the student’s school or college timetable. Bring that timetable when you visit Ring Road.</p>
-            </article>
+        <div className="wrap">
+          <div className="center" style={{ marginBottom: "1.4rem" }}>
+            <p className="kicker">HOW TO JOIN</p>
+            <h2>Four steps</h2>
           </div>
+          <div className="step-grid">
+            {steps.map(([n, title, text]) => (
+              <article className="step-card" key={n}>
+                <span className="step-no">{n}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap split">
+          <article className="panel">
+            <p className="kicker">BATCHES</p>
+            <h2>Timings are fixed with you</h2>
+            <p>Each course has its own batch. The clock time is chosen during counselling, using the student’s school or college timetable. Bring that timetable when you visit Ring Road, near JDCC Bank.</p>
+          </article>
           <EnquiryForm />
         </div>
       </section>

@@ -36,6 +36,8 @@ export default function EnquiryForm() {
 
   return (
     <form className="form panel" onSubmit={onSubmit}>
+      <p className="kicker">ENQUIRY</p>
+      <h2 style={{ fontSize: "1.45rem" }}>Tell us about the student</h2>
       <p className="hp" aria-hidden="true"><label>Company <input name="company" tabIndex={-1} autoComplete="off" /></label></p>
       <label>Student name <input name="student" required autoComplete="name" /></label>
       <label>Parent / guardian name <input name="parent" required /></label>

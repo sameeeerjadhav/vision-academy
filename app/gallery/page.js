@@ -6,9 +6,9 @@ const photos = [
   ["/images/hero.jpg", "Classroom"],
   ["/images/about.jpg", "Guidance"],
   ["/images/class.jpg", "Study hall"],
-  ["/images/hero.jpg", "Board work"],
-  ["/images/class.jpg", "Batch day"],
+  ["/images/class.jpg", "Board work"],
   ["/images/about.jpg", "Counselling"],
+  ["/images/hero.jpg", "Batch day"],
 ];
 
 export default function GalleryPage() {
@@ -16,14 +16,14 @@ export default function GalleryPage() {
     <>
       <PageHero
         kicker="GALLERY"
-        title="Classrooms and the centre"
-        text="These sample classroom pictures hold the layout. They will be replaced with photographs from the Ring Road centre."
+        title="Inside the classroom"
+        text="Sample classroom pictures hold these frames until photographs from the Ring Road centre are added."
       />
       <section className="section">
         <div className="wrap gallery">
-          {photos.map(([src, caption]) => (
-            <figure key={caption}>
-              <img src={src} alt={caption} />
+          {photos.map(([src, caption], index) => (
+            <figure key={`${caption}-${index}`}>
+              <img src={src} alt="" />
               <figcaption>{caption}</figcaption>
             </figure>
           ))}

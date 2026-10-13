@@ -6,9 +6,9 @@ export const metadata = { title: "Notices" };
 export default function NoticesPage() {
   return (
     <>
-      <PageHero kicker="NOTICES" title="What families should know" />
+      <PageHero kicker="NOTICES" title="What families should know" text="Counselling and the course list, kept in one place." />
       <section className="section">
-        <div className="wrap" style={{ display: "grid", gap: "0.8rem" }}>
+        <div className="wrap narrow stack">
           {notices.map((notice) => (
             <article className="notice" key={notice.title}>
               <time>{notice.date}</time>
