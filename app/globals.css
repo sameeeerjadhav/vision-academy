@@ -282,9 +282,21 @@ main { overflow-x: clip; }
   border-bottom: 1px solid transparent;
 }
 .g-link:hover { border-bottom-color: var(--brand); }
-.whatsapp {
+.float-actions {
   position: fixed; z-index: 45;
   right: 1.25rem; bottom: 1.25rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
+}
+.chat-fab {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #121a2b; color: white;
+  display: grid; place-items: center;
+  box-shadow: 0 8px 20px rgba(8, 16, 32, 0.28);
+  transition: transform 0.2s ease;
+}
+.chat-fab svg { width: 26px; height: 26px; }
+.chat-fab:hover { transform: translateY(-3px); }
+.whatsapp {
   width: 60px; height: 60px;
   display: block;
   transition: transform 0.2s ease;
@@ -426,7 +438,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid rgba(245, 180, 0,
   .review-card { padding: 1.7rem 1.15rem 1.4rem; min-height: 0; }
   .review-nav { display: none; }
   .review-stage { grid-template-columns: 1fr; }
-  .whatsapp.lift { bottom: 8.5rem; }
+  .float-actions.lift { bottom: 8.5rem; }
   .cookie { flex-direction: column; align-items: stretch; left: 0.75rem; right: 0.75rem; width: auto; }
   .course-card h3 { min-height: 0; }
   .hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.7rem); }
